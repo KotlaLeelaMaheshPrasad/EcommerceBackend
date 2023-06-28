@@ -30,4 +30,4 @@ app.listen(7000, () => {
   console.log(`Server Running at http://localhost:${7000}`);
 });
 
-module.exports = app;
+//module.exports = app;
