@@ -8,8 +8,6 @@ const productRoutes = require("./routes/productRoutes");
 const userDetailsRoutes = require("./routes/userDetailsRoutes");
 dotenv.config();
 
-const PORT = process.env.PORT || 7000;
-
 app.use(express.json());
 app.use(cors({ origin: process.env.ORIGIN }));
 app.use("/", authRoutes);
@@ -28,8 +26,8 @@ app.get("/", async (request, response) => {
   response.send("Welcome to FashionFit server,Enjoy our Services");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server Running at http://localhost:${PORT}`);
+app.listen(7000, () => {
+  console.log(`Server Running at http://localhost:${7000}`);
 });
 
 module.exports = app;
