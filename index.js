@@ -15,9 +15,7 @@ app.use("/products", productRoutes);
 app.use("/userDetails", userDetailsRoutes);
 
 const uri = process.env.MONGO_URI;
-mongoose.connect(uri, () => {
-  console.log("Database Started");
-});
+mongoose.connect(uri);
 
 
 
