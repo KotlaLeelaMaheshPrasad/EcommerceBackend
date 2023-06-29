@@ -13,7 +13,7 @@ router.post("/register", async (request, response) => {
   let result = await userDetails.find({ username: username });
   if (result.length === 0) {
     const createUser = await userDetails.create({
-      _id: mongoose.Types.ObjectId(),
+      _id: new mongoose.Types.ObjectId(),
       username: username,
       password: hashedPassword,
       name: name,
