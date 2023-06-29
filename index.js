@@ -8,9 +8,11 @@ const productRoutes = require("./routes/productRoutes");
 const userDetailsRoutes = require("./routes/userDetailsRoutes");
 dotenv.config();
 
-app.use(express.json());
 //cors update
 app.use(cors({ origin: process.env.ORIGIN }));
+
+app.use(express.json());
+
 app.use("/", authRoutes);
 app.use("/products", productRoutes);
 app.use("/userDetails", userDetailsRoutes);
