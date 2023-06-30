@@ -17,6 +17,8 @@ app.use("/", authRoutes);
 app.use("/products", productRoutes);
 app.use("/userDetails", userDetailsRoutes);
 
+
+//mongo URI update
 const uri = process.env.MONGO_URI;
 mongoose.connect(uri);
 
