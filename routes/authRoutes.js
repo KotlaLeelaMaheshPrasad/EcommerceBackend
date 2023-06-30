@@ -64,7 +64,8 @@ router.post("/login", async (request, response) => {
       const payload = {
         username: username,
       };
-      const jwtToken = jwt.sign(payload, process.env.JWT_SECRET_KEY);
+    //update
+      const jwtToken = await jwt.sign(payload, process.env.JWT_SECRET_KEY);
       response.send({ jwt_token: jwtToken });
     } else {
       response.status(400);
